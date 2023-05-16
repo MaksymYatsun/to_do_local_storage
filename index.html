@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="./lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="main.js"></script>
+  <title>Document</title>
+</head>
+
+<body class="bg-slate-800 text-slate-300">
+  <main class="h-[100vh]">
+    <div class="absolute top-0 h-full w-full -z-10" id="particles-js">
+    </div>
+    <div class="container mx-auto py-10 px-10 max-w-5xl" id="to-do">
+      <div class="flex justify-between">
+        <div>
+          <h1 class="mb-6 text-5xl font-bold">My Todo List</h1>
+          <span class="mb-6 block text-3xl" id="date"></span>
+        </div>
+        <svg id="darkMode" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="moon"
+            d="M16 28C16 43.1878 28 55.5 28 55.5C12.8122 55.5 0.5 43.1878 0.5 28C0.5 12.8122 12.8122 0.5 28 0.5C28 0.5 16 12.8122 16 28Z"
+            fill="#FFD600" />
+        </svg>
+      </div>
+      <form
+        class="mb-6 border py-1 px-2 rounded-xl flex justify-between transition-all hover:shadow-2xl hover:shadow-red-500 focus-within:shadow-2xl focus-within:shadow-red-600">
+        <input
+          class="bg-transparent w-full mr-4 text-lg outline-none focus:placeholder:opacity-0 placeholder:text-inherit"
+          type="text" id="new-card" placeholder="Enter a task...">
+        <button
+          class="bg-gradient-to-r py-1 px-3 rounded-xl font-bold text-lg hover:scale-110 focus:bg-gradient-to-l transition-all outline-none"
+          id="enter">Enter</button>
+      </form>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="to-do-list"></div>
+    </div>
+  </main>
+</body>
+
+</html>
