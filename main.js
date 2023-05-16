@@ -74,6 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemsArray = localStorage.getItem("items")
       ? JSON.parse(localStorage.getItem("items"))
       : [];
+    const objArray = [];
+
+    for (let i = 0; i < itemsArray.length; i++) {
+      objArray.push(JSON.parse(itemsArray[i]));
+    }
 
     toDo.querySelector("#enter").addEventListener("click", () => {
       const item = toDo.querySelector("#new-card");
@@ -269,9 +274,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateItem(text, i) {
-      itemsArray[i] = text;
+      objArray[i].value = text;
+      itemsArray[i] = JSON.stringify(objArray[i]);
+      console.log(JSON.stringify(itemsArray));
       localStorage.setItem("items", JSON.stringify(itemsArray));
-      location.reload;
+      location.reload();
     }
 
     function deleteItem(i) {
