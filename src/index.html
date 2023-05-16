@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="./lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="main.js"></script>
+  <title>Document</title>
+</head>
+
+<body class="bg-slate-800 text-slate-300">
+  <header>
+    <div class="container mx-auto flex max-w-5xl justify-between px-10 py-5">
+      <h1 class="my-auto text-3xl font-bold md:text-5xl">My ToDo</h1>
+      <svg id="darkMode" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="moon"
+          d="M16 28C16 43.1878 28 55.5 28 55.5C12.8122 55.5 0.5 43.1878 0.5 28C0.5 12.8122 12.8122 0.5 28 0.5C28 0.5 16 12.8122 16 28Z"
+          fill="#FFD600" />
+      </svg>
+    </div>
+  </header>
+  <main class="h-full">
+    <div class="absolute top-0 -z-10 h-full w-full" id="particles-js"></div>
+    <div class="container mx-auto max-w-5xl px-10 py-10" id="to-do">
+      <span class="mb-6 block text-2xl md:text-3xl" id="date"></span>
+      <div class="flex justify-between"></div>
+      <form
+        class="mb-6 flex justify-between rounded-xl border px-2 py-1 transition-all focus-within:shadow-2xl focus-within:shadow-red-600 hover:shadow-2xl hover:shadow-red-500">
+        <input
+          class="mr-4 w-full bg-transparent text-lg outline-none placeholder:text-inherit focus:placeholder:opacity-0"
+          type="text" id="new-card" placeholder="Enter a task..." />
+        <button
+          class="rounded-xl bg-gradient-to-r px-3 py-1 text-lg font-bold outline-none transition-all hover:scale-110 focus:scale-110"
+          id="enter">
+          Enter
+        </button>
+      </form>
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3" id="to-do-list"></div>
+    </div>
+  </main>
+</body>
+
+</html>

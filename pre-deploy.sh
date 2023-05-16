@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir dist && cp ./src/index.html ./dist/index.html && cp -r ./src/img ./dist/img &&  cp -r ./src/img/svg ./dist/img/svg && cp -r ./src/burger.js ./dist/burger.js && sed -r -i 's/\.\.\/\dist/\./g' ./dist/index.html
+mkdir dist && cp ./src/index.html ./dist/index.html && cp -r ./src/lib ./dist/lib && cp -r ./src/main.js ./dist/main.js && sed -r -i 's/\.\.\/\dist/\./g' ./dist/index.html
